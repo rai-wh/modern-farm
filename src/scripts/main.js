@@ -9,6 +9,7 @@ import {addPlant} from "./field.js"
 import {usePlants} from "./field.js"
 import {plantSeeds} from "./tractor.js"
 import {harvestPlants} from "./harvester.js"
+import {Catalog} from "./catalog.js"
 
 console.log("Welcome to the main module")
 const yearlyPlan = createPlan()
@@ -36,4 +37,9 @@ console.log(growArray)
 
 const harvested = harvestPlants(growArray)
 console.log(harvested)
+
+
+const parentHTML = document.querySelector(".container")
+parentHTML.innerHTML = Catalog(harvested)
+// Catalog(harvested)
 
